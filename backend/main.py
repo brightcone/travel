@@ -11,7 +11,7 @@ load_dotenv()
 
 import openai
 
-# openai.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 app = Flask(__name__)
 
