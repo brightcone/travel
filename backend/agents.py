@@ -1,7 +1,7 @@
 from crewai import Agent
 from textwrap import dedent
 from langchain_openai import ChatOpenAI
-
+import os
 from tools.search_tools import SearchTools
 from tools.calculator_tools import CalculatorTools
 
@@ -38,7 +38,7 @@ Notes:
 class TravelAgents:
     def __init__(self):
         # self.OpenAIGPT35 = ChatOpenAI()
-        # self.OpenAIGPT35 = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"))
+       
         openai_api_key = os.getenv("OPENAI_API_KEY")  # Retrieve OpenAI API key from .env file
         self.OpenAIGPT35 = ChatOpenAI(openai_api_key=openai_api_key)
     def expert_travel_agent(self):
