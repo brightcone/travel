@@ -39,8 +39,8 @@ class TravelAgents:
     def __init__(self):
         # self.OpenAIGPT35 = ChatOpenAI()
        
-        openai_api_key = os.getenv("OPENAI_API_KEY")  # Retrieve OpenAI API key from .env file
-        self.OpenAIGPT35 = ChatOpenAI(openai_api_key=openai_api_key)
+        
+        pass
     def expert_travel_agent(self):
         return Agent(
             role="Expert Travel Agent",

@@ -93,5 +93,5 @@ def generate_trip_plan():
     return jsonify({"result": result})
 
 if __name__ == '__main__':
-    openai.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    
     app.run(debug=True)
