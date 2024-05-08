@@ -3,7 +3,7 @@ from crewai import Crew
 from textwrap import dedent
 from agents import TravelAgents
 from tasks import TravelTasks
-
+import os
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 
@@ -11,7 +11,7 @@ load_dotenv()
 
 import openai
 
-openai.OPENAI_API_KEY = "sk-proj-X7P2SVCpxeVmvW3f1yBjT3BlbkFJrm3OJIhaBqf0KZmGp1xr"
+# openai.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
 
@@ -93,4 +93,5 @@ def generate_trip_plan():
     return jsonify({"result": result})
 
 if __name__ == '__main__':
+    openai.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     app.run(debug=True)
